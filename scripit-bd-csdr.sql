@@ -32,3 +32,11 @@ create table public.aplicativo (
   criado_em timestamp without time zone null,
   constraint aplicativo_pkey primary key (id_aplicativo)
 ) TABLESPACE pg_default;
+
+create table public.termo_lgpd (
+  id serial not null,
+  versao character varying(20) not null,
+  conteudo text not null,
+  data_publicacao timestamp without time zone not null,
+  constraint termo_lgpd_pkey primary key (id)
+) TABLESPACE pg_default;
